@@ -42,17 +42,17 @@ function Hero() {
         </h1>
         <h2>Unity Game Developer</h2>
         <span>
-          <a href="x.com/TacProgram" target="_blank">
+          <a href="https://x.com/TacProgram" target="_blank">
             <img src={twitterIcon} alt="Twitter Icon" />
           </a>
-          <a href="github.com/Tactical-Programmer" target="_blank">
+          <a href="https://github.com/Tactical-Programmer" target="_blank">
             <img src={githubIcon} alt="GitHub Icon" />
           </a>
-          <a href="linkedin.com/in/tactical-programmer" target="_blank">
+          <a href="https://linkedin.com/in/tactical-programmer" target="_blank">
             <img src={linkedinIcon} alt="Linkedin Icon" />
           </a>
         </span>
-        <p>An indie game developer with a passion for Videogames.</p>
+        <p className={styles.description}>An indie game developer with a passion for Videogames.</p>
         <a href={cv} download>
           <button className="hover">Resume</button>
         </a>
