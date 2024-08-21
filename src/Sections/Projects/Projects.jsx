@@ -1,5 +1,6 @@
 import styles from "./ProjectsStyles.module.css";
 import viberr from "../../assets/viberr.png";
+import freshBurger from "../../assets/fresh-burger.png";
 import ProjectCard from "../../Common/ProjectCard";
 
 function Projects() {
@@ -14,10 +15,10 @@ function Projects() {
           p="Streaming App"
         />
         <ProjectCard
-          src={viberr}
+          src={freshBurger}
           link={"https://github.com/Ade-mir/company-landing-page-2"}
-          h3="Viberr"
-          p="Streaming App"
+          h3="Fresh Burger"
+          p="Hamburger Restaurant"
         />
       </div>
     </section>
