@@ -66,6 +66,14 @@ p {
   font-weight: 300;
 }
 
+/* html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+} */
+
 .sectionTitle {
   margin-bottom: 30px;
 }

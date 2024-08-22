@@ -58,7 +58,6 @@ function Hero() {
         </a>
       </div>
     </section>
-    //Create a "Free Money" button that runs away
   );
 }
 

@@ -70,6 +70,7 @@
 
 .description {
   max-width: 24ch;
+  margin: 0 auto;
 }
 
 .info {
