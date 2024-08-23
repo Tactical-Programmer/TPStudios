@@ -52,7 +52,9 @@ function Hero() {
             <img src={linkedinIcon} alt="Linkedin Icon" />
           </a>
         </span>
-        <p className={styles.description}>An indie game developer with a passion for Videogames.</p>
+        <p className={styles.description}>
+          An indie game developer with a passion for Videogames.
+        </p>
         <a href={cv} download>
           <button className="hover">Resume</button>
         </a>
