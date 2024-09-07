@@ -21,7 +21,8 @@ function App() {
 
 export default App;
 
-//Fix copyright gap (because of ScrollToTop section)
+//Fix the section gaps (and bottom gap, with media sizes too)
+//Adjust scroll to top button size with media size
 //Toggle for theme
 //Button that runs away
 //Projects section first
@@ -37,3 +38,10 @@ export default App;
 // - Have yellow police lines that scroll inside Project E to indicate lack of content
 //draggable icons and widgets
 //Aaron interacting with websites elements
+//Text highlight effect
+//Hovering background icons
+//Guide the user through the projects
+//Gradient Borders
+//On hover, flip the image to show TP Logo (Also Change the name)
+//Gradient borders?
+//Project cards on hover increase image size, and onclick zoom in to the image and it's now a new page detailing the project

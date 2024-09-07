@@ -2,12 +2,12 @@ import styles from "./FooterStyles.module.css";
 
 function Footer() {
   return (
-    <section id="footer" className={styles.container}>
+    <div id="footer" className={styles.container}>
       <p>
         &copy; 2024 Anderson Queiroz. <br />
         All rights reserved.
       </p>
-    </section>
+    </div>
   );
 }
 
