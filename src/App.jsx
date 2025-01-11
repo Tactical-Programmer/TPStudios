@@ -22,6 +22,7 @@ function App() {
 export default App;
 
 //Fix the section gaps (and bottom gap, with media sizes too)
+//Scroll to top button must disappear when at the top
 //Adjust scroll to top button size with media size
 //Toggle for theme
 //Button that runs away
@@ -44,4 +45,4 @@ export default App;
 //Gradient Borders
 //On hover, flip the image to show TP Logo (Also Change the name)
 //Gradient borders?
-//Project cards on hover increase image size, and onclick zoom in to the image and it's now a new page detailing the project
+//Project cards on hover increase image size, change picture (flip card???) and onclick zoom in to the image and it's now a new page detailing the project

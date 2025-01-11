@@ -25,12 +25,11 @@
   max-width: 26ch;
 }
 
-hr {
-  width: 100px;
+h2 {
+  width: 325px;
   height: 1px;
   border: none;
-  background-color: var(--text-color);
-  margin: 30px auto;
+  margin: 40px auto;
 }
 
 @media (width >= 800px) {
@@ -41,9 +40,5 @@ hr {
     p {
       font-size: 20px;
     }
-  }
-
-  hr {
-    width: 300px;
   }
 }
