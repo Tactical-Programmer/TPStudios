@@ -17,7 +17,7 @@ function ScrollToTopButton() {
 
   return (
     <div>
-      <button onClick={scrollToTop} className={styles.container}>
+      <button onClick={scrollToTop} id="ScrollToTop" className={styles.container}>
         <img className="hover" src={arrowup} alt="arrow up"/>
       </button>
     </div>

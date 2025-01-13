@@ -30,7 +30,11 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 75px;
+}
+
+#footer { /* because Gap refuses to work with me, we'll use Margin */
+  margin: -30px;
 }
 
 h1,
@@ -80,6 +84,9 @@ p {
   #root {
     gap: 100px;
   }
+  #footer { /* because Gap refuses to work with me, we'll use Margin */
+    margin: -65px;
+  }
   h1 {
     font-size: 40px;
   }
@@ -98,6 +105,9 @@ p {
   @media (width >= 1400px) {
     #root {
       gap: 200px;
+    }
+    #footer { /* because Gap refuses to work with me, we'll use Margin */
+      margin: -175px;
     }
     h1 {
       font-size: 48px;

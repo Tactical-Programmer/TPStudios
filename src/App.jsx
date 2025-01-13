@@ -21,9 +21,8 @@ function App() {
 
 export default App;
 
-//Fix the section gaps (and bottom gap, with media sizes too)
 //Scroll to top button must disappear when at the top
-//Adjust scroll to top button size with media size
+//Adjust scroll to top button size with media size (or make it disappear on smaller screens)
 //Toggle for theme
 //Button that runs away
 //Projects section first
