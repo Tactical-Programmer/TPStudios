@@ -33,7 +33,7 @@ body {
   gap: 75px;
 }
 
-#footer { /* because Gap refuses to work with me, we'll use Margin */
+#footer { /* Used to reduce gap above and below footer, because Gap refuses to work with me, we'll use Margin */
   margin: -30px;
 }
 
@@ -84,7 +84,7 @@ p {
   #root {
     gap: 100px;
   }
-  #footer { /* because Gap refuses to work with me, we'll use Margin */
+  #footer { /* Used to reduce gap above and below footer, because Gap refuses to work with me, we'll use Margin */
     margin: -65px;
   }
   h1 {
@@ -106,7 +106,7 @@ p {
     #root {
       gap: 200px;
     }
-    #footer { /* because Gap refuses to work with me, we'll use Margin */
+    #footer { /* Used to reduce gap above and below footer, because Gap refuses to work with me, we'll use Margin */
       margin: -175px;
     }
     h1 {
