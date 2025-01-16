@@ -2,6 +2,8 @@ import styles from "./ProjectsStyles.module.css";
 import midnightDrive from "../../assets/Midnight Drive.png";
 import demonShurikenMaster from "../../assets/Demon Shuriken Master.png";
 import ProjectCard from "../../Common/ProjectCard";
+import MiniWebsiteDemonShurikenMaster from "../../MiniWebsites/demon-shuriken-master/DemonShurikenMaster";
+import MiniWebsiteMidnightDrive from "../../MiniWebsites/midnight-drive/MidnightDrive";
 
 function Projects() {
   return (
@@ -10,15 +12,15 @@ function Projects() {
       <div className={styles.projectsContainer}>
         <ProjectCard
           src={midnightDrive}
-          link={"#"}
           h3="Midnight Drive"
           p="Retrowave Music Racing Game"
+          miniWebsiteComponent={<MiniWebsiteMidnightDrive />}
         />
         <ProjectCard
           src={demonShurikenMaster}
-          link={"#"}
           h3="Demon Shuriken Master"
-          p="Top Down ninja Shooting Game"
+          p="Top Down Ninja Shooting Game"
+          miniWebsiteComponent={<MiniWebsiteDemonShurikenMaster />}
         />
       </div>
     </section>

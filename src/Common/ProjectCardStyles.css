@@ -1,0 +1,169 @@
+.project-card-wrapper {
+  position: relative;
+}
+
+.project-card {
+  position: relative;
+  transition: all 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Add opacity transition */
+  cursor: pointer;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.project-card * {
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-out transition for all child elements */
+}
+
+.project-card img {
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-out transition for image */
+}
+
+.project-card.expanding {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto; /* Maintain original width */
+  height: auto; /* Maintain original height */
+  z-index: 1000;
+  transition: all 0.5s ease-in-out;
+  animation: moveToCenter 0.5s ease-in-out forwards; /* Add keyframe animation */
+}
+
+.project-card.expanded {
+  display: none; /* Remove the project card when expanded */
+}
+
+.project-card.minimizing {
+  opacity: 0; /* Fade out the project card when minimizing */
+}
+
+.project-card.visible {
+  opacity: 1; /* Fade in the project card when visible */
+}
+
+.mini-website {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  opacity: 0; /* Initially hide the mini-website content */
+  transition: opacity 0.5s ease-in-out;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--expanded-bg-color, #ddd340); /* Ensure the background color is applied */
+  z-index: 1001; /* Ensure the mini-website content is above the background */
+  animation: expandBackground 0.5s ease-in-out forwards;
+  animation-delay: 0.5s; /* Add delay to start expanding after moving to center */
+}
+
+.mini-website.expanded {
+  opacity: 1; /* Make the mini-website content visible after expansion */
+}
+
+.mini-website.minimizing {
+  animation: minimizeBackground 0.5s ease-in-out forwards; /* Add keyframe animation for minimizing */
+}
+
+.mini-website.hidden {
+  display: none; /* Hide the mini-website content */
+}
+
+.mini-website-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.mini-website-content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.collapse-button {
+  position: absolute;
+  top: 50px; /* Move the button down */
+  right: 10px;
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px; /* Increase padding for better visibility */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1002; /* Ensure the button is above other elements */
+  opacity: 1; /* Ensure the button is visible */
+}
+
+.collapse-button:hover {
+  background-color: var(--btn-hover-color, #0056b3);
+}
+
+.project-card-placeholder {
+  width: 300px; /* Adjust to your card's original width */
+  height: 200px; /* Adjust to your card's original height */
+  visibility: hidden; /* Make the placeholder invisible */
+}
+
+.close-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1003; /* Ensure the button is above other elements */
+}
+
+.close-button:hover {
+  background-color: var(--btn-hover-color, #0056b3);
+}
+
+@keyframes moveToCenter {
+  0% {
+    top: initial;
+    left: initial;
+    transform: none;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes expandBackground {
+  0% {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--expanded-bg-color, #ddd340);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes minimizeBackground {
+  0% {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--expanded-bg-color, #ddd340);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
