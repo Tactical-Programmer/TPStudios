@@ -7,6 +7,7 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
   const [isExpanding, setIsExpanding] = useState(false);
   const [isMinimizing, setIsMinimizing] = useState(false);
   const [showMiniWebsite, setShowMiniWebsite] = useState(false);
+  const [flash, setFlash] = useState(false);
   let CardSelectAudio = new Audio(CardSelectSound);
   CardSelectAudio.volume = 0.5;
 
@@ -16,10 +17,12 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
     } else {
       document.body.classList.remove("no-scroll");
     }
-  }, [showMiniWebsite || isMinimizing]);
+  }, [showMiniWebsite, isMinimizing]);
 
   const handleExpand = () => {
     CardSelectAudio.play();
+    setFlash(true);
+    setTimeout(() => setFlash(false), 100); // Remove flash class after animation
     setIsExpanding(true);
     setTimeout(() => {
       setIsExpanding(false);
@@ -41,7 +44,7 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
     <>
       <div className="project-card-wrapper">
         <div
-          className={`project-card ${isExpanding ? "expanding" : ""} ${isExpanded ? "expanded" : ""} ${isMinimizing ? "minimizing" : "visible"}`}
+          className={`project-card ${isExpanding ? "expanding" : ""} ${isExpanded ? "expanded" : ""} ${isMinimizing ? "minimizing" : "visible"} ${flash ? "flash" : ""}`}
           onClick={!isExpanded ? handleExpand : null}
         >
           <a href={link} target="_blank">

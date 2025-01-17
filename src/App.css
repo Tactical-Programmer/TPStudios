@@ -8,6 +8,7 @@
   --footer-text-color: #888;
   --drop-shadow-color: rgba(0, 0, 0, 0.25);
   --expanded-bg-color: #ddd340; /* Custom expanded background color */
+  --card-flash-color: #2ad8ff;
 }
 
 [data-theme="dark"] {
@@ -19,6 +20,7 @@
   --form-text-color: #fff;
   --footer-text-color: #bbb;
   --drop-shadow-color: rgba(255, 255, 255, 0.25);
+  --card-flash-color: #fff;
 }
 
 body {
