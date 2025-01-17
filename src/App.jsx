@@ -22,6 +22,8 @@ function App() {
 export default App;
 
 //Understand new project card code
+//Have clean animation when selecting project card (like a game)
+//No placeholder card
 //Clean up and perfect project card transitions and animations
 //Create mini websites for each project
 //Adjust scroll to top button size with media size (or make it disappear on smaller screens)

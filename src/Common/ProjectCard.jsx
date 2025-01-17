@@ -8,12 +8,12 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
   const [showMiniWebsite, setShowMiniWebsite] = useState(false);
 
   useEffect(() => {
-    if (isExpanded || isExpanding) {
+    if (showMiniWebsite || isMinimizing) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
-  }, [isExpanded, isExpanding]);
+  }, [showMiniWebsite || isMinimizing]);
 
   const handleExpand = () => {
     setIsExpanding(true);
@@ -46,7 +46,6 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
             <p>{p}</p>
           </a>
         </div>
-        {(isExpanding || isExpanded) && <div className="project-card-placeholder"></div>}
       </div>
       {isExpanded && (
         <>

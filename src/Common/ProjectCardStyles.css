@@ -8,18 +8,6 @@
   overflow: hidden; /* Ensure content doesn't overflow */
 }
 
-.project-card.expanding {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: auto; /* Maintain original width */
-  height: auto; /* Maintain original height */
-  z-index: 1000;
-  transition: all 0.5s ease-in-out;
-  animation: moveToCenter 0.5s ease-in-out forwards; /* Add keyframe animation*/
-}
-
 .project-card.expanded {
   display: none; /* Remove the project card when expanded */
 }
@@ -112,19 +100,6 @@
 
 .close-button:hover {
   background-color: var(--btn-hover-color, #0056b3);
-}
-
-@keyframes moveToCenter {
-  0% {
-    top: initial;
-    left: initial;
-    transform: none;
-  }
-  100% {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 }
 
 @keyframes expandBackground {
