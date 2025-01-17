@@ -4,17 +4,8 @@
 
 .project-card {
   position: relative;
-  transition: all 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Add opacity transition */
   cursor: pointer;
   overflow: hidden; /* Ensure content doesn't overflow */
-}
-
-.project-card * {
-  transition: opacity 0.5s ease-in-out; /* Smooth fade-out transition for all child elements */
-}
-
-.project-card img {
-  transition: opacity 0.5s ease-in-out; /* Smooth fade-out transition for image */
 }
 
 .project-card.expanding {
@@ -26,7 +17,7 @@
   height: auto; /* Maintain original height */
   z-index: 1000;
   transition: all 0.5s ease-in-out;
-  animation: moveToCenter 0.5s ease-in-out forwards; /* Add keyframe animation */
+  animation: moveToCenter 0.5s ease-in-out forwards; /* Add keyframe animation*/
 }
 
 .project-card.expanded {
@@ -39,6 +30,11 @@
 
 .project-card.visible {
   opacity: 1; /* Fade in the project card when visible */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Scale up the project card on hover */
+  transition: transform 0.25s ease-in-out;
 }
 
 .mini-website {
@@ -54,7 +50,6 @@
   background-color: var(--expanded-bg-color, #ddd340); /* Ensure the background color is applied */
   z-index: 1001; /* Ensure the mini-website content is above the background */
   animation: expandBackground 0.5s ease-in-out forwards;
-  animation-delay: 0.5s; /* Add delay to start expanding after moving to center */
 }
 
 .mini-website.expanded {
@@ -67,12 +62,6 @@
 
 .mini-website.hidden {
   display: none; /* Hide the mini-website content */
-}
-
-.mini-website-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
 }
 
 .mini-website-content {
