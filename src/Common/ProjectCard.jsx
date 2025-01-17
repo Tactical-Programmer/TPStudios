@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import "./ProjectCardStyles.css"; // Import the CSS file
+import CardSelectSound from '../Sounds/Card-Select.mp3';
 
 function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isExpanding, setIsExpanding] = useState(false);
   const [isMinimizing, setIsMinimizing] = useState(false);
   const [showMiniWebsite, setShowMiniWebsite] = useState(false);
+  let CardSelectAudio = new Audio(CardSelectSound);
+  CardSelectAudio.volume = 0.5;
 
   useEffect(() => {
     if (showMiniWebsite || isMinimizing) {
@@ -16,6 +19,7 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
   }, [showMiniWebsite || isMinimizing]);
 
   const handleExpand = () => {
+    CardSelectAudio.play();
     setIsExpanding(true);
     setTimeout(() => {
       setIsExpanding(false);
