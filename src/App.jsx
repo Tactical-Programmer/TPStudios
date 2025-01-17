@@ -23,8 +23,6 @@ export default App;
 
 //Understand new project card code
 //Have flash effect around card on click
-//No placeholder card
-//Clean up and perfect project card transitions and animations
 //Create mini websites for each project
 //Adjust scroll to top button size with media size (or make it disappear on smaller screens)
 //Toggle for theme

@@ -44,7 +44,7 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
     <>
       <div className="project-card-wrapper">
         <div
-          className={`project-card ${isExpanding ? "expanding" : ""} ${isExpanded ? "expanded" : ""} ${isMinimizing ? "minimizing" : "visible"} ${flash ? "flash" : ""}`}
+          className={`project-card ${flash ? "flash" : ""} ${isExpanding ? "expanding" : ""} ${isExpanded ? "expanded" : ""} ${isMinimizing ? "minimizing" : "visible"}`}
           onClick={!isExpanded ? handleExpand : null}
         >
           <a href={link} target="_blank">

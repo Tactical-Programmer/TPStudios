@@ -7,23 +7,22 @@
   cursor: pointer;
   overflow: hidden; /* Ensure content doesn't overflow */
   border-radius: 15px; /* Add rounded borders */
-}
-
-.project-card.expanded {
-  display: none; /* Remove the project card when expanded */
-}
-
-.project-card.minimizing {
-  opacity: 0; /* Fade out the project card when minimizing */
+  transition: opacity 0.3s ease-in-out, transform 0.25s ease-in-out; /* Ensure transitions are applied */
 }
 
 .project-card.visible {
   opacity: 1; /* Fade in the project card when visible */
 }
 
+.project-card.expanding,
+.project-card.expanded,
+.project-card.minimizing {
+  opacity: 0; /* Fade out */
+}
+
 .project-card:hover {
   transform: scale(1.05); /* Scale up the project card on hover */
-  transition: transform 0.25s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.25s ease-in-out; /* Ensure transitions are applied */
 }
 
 .project-card::after {
@@ -36,12 +35,11 @@
   background-color: var(--card-flash-color);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .project-card.flash::after {
-  opacity: 1;
-  transform: scale(1.05);
+  opacity: 0.5;
 }
 
 .mini-website {
@@ -94,12 +92,6 @@
 
 .collapse-button:hover {
   background-color: var(--btn-hover-color, #0056b3);
-}
-
-.project-card-placeholder {
-  width: 300px; /* Adjust to your card's original width */
-  height: 200px; /* Adjust to your card's original height */
-  visibility: hidden; /* Make the placeholder invisible */
 }
 
 .close-button {
