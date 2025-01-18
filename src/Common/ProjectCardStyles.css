@@ -52,7 +52,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--expanded-bg-color, #ddd340); /* Ensure the background color is applied */
   z-index: 1001; /* Ensure the mini-website content is above the background */
   animation: expandBackground 0.5s ease-in-out forwards;
 }
@@ -123,7 +122,6 @@
   100% {
     width: 100vw;
     height: 100vh;
-    background-color: var(--expanded-bg-color, #ddd340);
     transform: translate(-50%, -50%) scale(1);
   }
 }
@@ -132,13 +130,11 @@
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: var(--expanded-bg-color, #ddd340);
     transform: translate(-50%, -50%) scale(1);
   }
   100% {
     width: 0;
     height: 0;
-    background-color: transparent;
     transform: translate(-50%, -50%) scale(0);
   }
 }

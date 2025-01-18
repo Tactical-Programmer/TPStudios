@@ -3,21 +3,21 @@ import "./ProjectCardStyles.css"; // Import the CSS file
 import CardSelectSound from '../Sounds/Card-Select.mp3';
 
 function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isExpanding, setIsExpanding] = useState(false);
-  const [isMinimizing, setIsMinimizing] = useState(false);
-  const [showMiniWebsite, setShowMiniWebsite] = useState(false);
   const [flash, setFlash] = useState(false);
+  const [isExpanding, setIsExpanding] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showMiniWebsite, setShowMiniWebsite] = useState(false);
+  const [isMinimizing, setIsMinimizing] = useState(false);
   let CardSelectAudio = new Audio(CardSelectSound);
   CardSelectAudio.volume = 0.5;
 
   useEffect(() => {
-    if (showMiniWebsite || isMinimizing) {
+    if (flash || isExpanding || isExpanded || showMiniWebsite || isMinimizing) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
-  }, [showMiniWebsite, isMinimizing]);
+  }, [flash, isExpanding, isExpanded, showMiniWebsite, isMinimizing]);
 
   const handleExpand = () => {
     CardSelectAudio.play();

@@ -21,6 +21,7 @@ function App() {
 
 export default App;
 
+//Add sound to every button
 //Understand new project card code
 //Have flash effect around card on click
 //Create mini websites for each project
