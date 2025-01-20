@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import "./ProjectCardStyles.css"; // Import the CSS file
 import CardSelectSound from '../Sounds/Card-Select.mp3';
+import MiniWebsiteOpenSound from '../Sounds/Mini-Website-Open.mp3';
+import MiniWebsiteCloseSound from '../Sounds/Mini-Website-Close.mp3';
 
 function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
   const [flash, setFlash] = useState(false);
@@ -8,8 +10,13 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showMiniWebsite, setShowMiniWebsite] = useState(false);
   const [isMinimizing, setIsMinimizing] = useState(false);
-  let CardSelectAudio = new Audio(CardSelectSound);
+
+  const CardSelectAudio = new Audio(CardSelectSound);
   CardSelectAudio.volume = 0.5;
+  const MiniWebsiteOpenAudio = new Audio(MiniWebsiteOpenSound);
+  MiniWebsiteOpenAudio.volume = 0.5;
+  const MiniWebsiteCloseAudio = new Audio(MiniWebsiteCloseSound);
+  MiniWebsiteCloseAudio.volume = 0.5;
 
   useEffect(() => {
     if (flash || isExpanding || isExpanded || showMiniWebsite || isMinimizing) {
@@ -28,11 +35,15 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
       setIsExpanding(false);
       setIsExpanded(true);
       setShowMiniWebsite(true); // Show mini website content after expansion
+      MiniWebsiteOpenAudio.currentTime = 0;
+      MiniWebsiteOpenAudio.play();
     }, 500); // Match the transition duration
   };
 
   const handleCollapse = () => {
     setIsMinimizing(true);
+    MiniWebsiteCloseAudio.currentTime = 0;
+    MiniWebsiteCloseAudio.play();
     setTimeout(() => {
       setIsExpanded(false);
       setIsMinimizing(false);

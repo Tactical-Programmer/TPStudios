@@ -3,6 +3,7 @@ import styles from "./ScrollToTopStyles.module.css";
 import arrowuplight from "./arrow-up-light.png";
 import arrowupdark from "./arrow-up-dark.png";
 import { useTheme } from "../../Common/ThemeContext";
+import ScrollToTopSound from "../../Sounds/Scroll-To-Top.mp3";
 
 function ScrollToTopButton() {
   const { theme } = useTheme();
@@ -10,6 +11,8 @@ function ScrollToTopButton() {
 
   const [isVisible, setIsVisible] = useState(false);
   const [scrollThreshold, setScrollThreshold] = useState(200); // Default threshold
+
+  const ScrollToTopAudio = new Audio(ScrollToTopSound);
 
   // Function to dynamically set the threshold based on media queries
   const updateScrollThreshold = () => {
@@ -41,6 +44,8 @@ function ScrollToTopButton() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    ScrollToTopAudio.currentTime = 0;
+    ScrollToTopAudio.play();
   };
 
   return (

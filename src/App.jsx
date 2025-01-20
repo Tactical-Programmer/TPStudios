@@ -21,8 +21,7 @@ function App() {
 
 export default App;
 
-//Add sound to every button
-//Understand new project card code
+//Only flash card image
 //Have flash effect around card on click
 //Create mini websites for each project
 //Adjust scroll to top button size with media size (or make it disappear on smaller screens)

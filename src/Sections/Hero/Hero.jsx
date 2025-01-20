@@ -10,6 +10,9 @@ import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
 import cv from "../../assets/cv.pdf";
 import { useTheme } from "../../Common/ThemeContext";
+import ThemeChangeSound from "../../Sounds/Theme-Change.mp3";
+import ResumeDownloadSound from "../../Sounds/Resume-Download.mp3";
+import IconSelectSound from "../../Sounds/Icon-Select.mp3";
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
@@ -18,6 +21,17 @@ function Hero() {
   const twitterIcon = theme === "light" ? twitterLight : twitterDark;
   const githubIcon = theme === "light" ? githubLight : githubDark;
   const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
+
+  const ThemeChangeAudio = new Audio(ThemeChangeSound);
+  ThemeChangeAudio.volume = 0.5;
+  const ResumeDownloadAudio = new Audio(ResumeDownloadSound);
+  ResumeDownloadAudio.volume = 0.2;
+  const IconSelectAudio = new Audio(IconSelectSound);
+
+  const playAudio = (audio) => {
+    audio.currentTime = 0;
+    audio.play();
+  };
 
   return (
     <section id="hero" className={styles.container}>
@@ -31,7 +45,10 @@ function Hero() {
           className={styles.colorMode}
           src={themeIcon}
           alt="Color mode icon"
-          onClick={toggleTheme}
+          onClick={() => {
+            toggleTheme();
+            playAudio(ThemeChangeAudio);
+          }}
         />
       </div>
       <div className={styles.info}>
@@ -42,13 +59,13 @@ function Hero() {
         </h1>
         <h2>Unity Game Developer</h2>
         <span>
-          <a href="https://x.com/TacProgram" target="_blank">
+          <a href="https://x.com/TacProgram" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
             <img src={twitterIcon} alt="Twitter Icon" />
           </a>
-          <a href="https://github.com/Tactical-Programmer" target="_blank">
+          <a href="https://github.com/Tactical-Programmer" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
             <img src={githubIcon} alt="GitHub Icon" />
           </a>
-          <a href="https://linkedin.com/in/tactical-programmer" target="_blank">
+          <a href="https://linkedin.com/in/tactical-programmer" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
             <img src={linkedinIcon} alt="Linkedin Icon" />
           </a>
         </span>
@@ -56,7 +73,7 @@ function Hero() {
           An indie game developer with a passion for Videogames.
         </p>
         <a href={cv} download>
-          <button className="hover">Resume</button>
+          <button className="hover" onClick={() => playAudio(ResumeDownloadAudio)}>Resume</button>
         </a>
       </div>
     </section>

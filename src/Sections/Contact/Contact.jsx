@@ -1,6 +1,9 @@
 import styles from "./ContactStyles.module.css";
+import ContactSubmitSound from "../../Sounds/Contact-Submit.mp3";
 
 function Contact() {
+  const ContactSubmitAudio = new Audio(ContactSubmitSound);
+
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
@@ -31,7 +34,7 @@ function Contact() {
             required
           />
         </div>
-        <input className="hover btn" type="submit" value="Submit" />
+        <input className="hover btn" type="submit" value="Submit" onClick={() => ContactSubmitAudio.play()}/>
       </form>
     </section>
   );
