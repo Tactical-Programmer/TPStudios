@@ -27,9 +27,6 @@ export default App;
 //Adjust scroll to top button size with media size (or make it disappear on smaller screens)
 //Toggle for theme
 //Button that runs away
-//pfp on the left
-//Background that covers entire section (and maybe one that covers the whole page)
-//Snap scrolling (started in App.css)
 //formspree integration in contact form
 // - About you section
 //     - Projects
