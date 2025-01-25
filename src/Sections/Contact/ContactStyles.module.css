@@ -13,7 +13,7 @@ form {
 }
 
 textarea,
-input:not([type="submit"]) {
+input:is([type="text"]) {
   height: 50px;
   padding-left: 16px;
   width: 300px;
@@ -64,7 +64,7 @@ input[type="submit"]:active {
 
 @media (width >= 768px) {
   textarea,
-  input:not([type="submit"]) {
+  input:is([type="text"]) {
     width: 550px;
     font-size: 20px;
   }
@@ -75,7 +75,7 @@ input[type="submit"]:active {
 
 @media (width >= 1200px) {
   textarea,
-  input:not([type="submit"]) {
+  input:is([type="text"]) {
     width: 600px;
   }
 }

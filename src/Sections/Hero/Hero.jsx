@@ -17,11 +17,6 @@ import IconSelectSound from "../../Sounds/Icon-Select.mp3";
 function Hero() {
   const { theme, toggleTheme } = useTheme();
 
-  const themeIcon = theme === "light" ? sun : moon;
-  const twitterIcon = theme === "light" ? twitterLight : twitterDark;
-  const githubIcon = theme === "light" ? githubLight : githubDark;
-  const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
-
   const ThemeChangeAudio = new Audio(ThemeChangeSound);
   ThemeChangeAudio.volume = 0.5;
   const ResumeDownloadAudio = new Audio(ResumeDownloadSound);
@@ -41,15 +36,21 @@ function Hero() {
           src={heroImg}
           alt="Profile Picture of Anderson Queiroz, aka, Tactical Programmer"
         />
-        <img
-          className={styles.colorMode}
-          src={themeIcon}
-          alt="Color mode icon"
-          onClick={() => {
-            toggleTheme();
-            playAudio(ThemeChangeAudio);
-          }}
-        />
+        <label className={styles.switch}>
+          <input
+            type="checkbox"
+            checked={theme === "dark"}
+            onChange={() => {
+              toggleTheme();
+              playAudio(ThemeChangeAudio);
+            }}
+          />
+          <span className={styles.slider}>
+            <span className={styles.iconContainer}>
+              <img src={theme === "light" ? sun : moon} alt="Color mode icon" className={styles.icon} />
+            </span>
+          </span>
+        </label>
       </div>
       <div className={styles.info}>
         <h1>
@@ -60,13 +61,13 @@ function Hero() {
         <h2>Unity Game Developer</h2>
         <span>
           <a href="https://x.com/TacProgram" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
-            <img src={twitterIcon} alt="Twitter Icon" />
+            <img src={theme === "light" ? twitterLight : twitterDark} alt="Twitter Icon" />
           </a>
           <a href="https://github.com/Tactical-Programmer" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
-            <img src={githubIcon} alt="GitHub Icon" />
+            <img src={theme === "light" ? githubLight : githubDark} alt="GitHub Icon" />
           </a>
           <a href="https://linkedin.com/in/tactical-programmer" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
-            <img src={linkedinIcon} alt="Linkedin Icon" />
+            <img src={theme === "light" ? linkedinLight : linkedinDark} alt="Linkedin Icon" />
           </a>
         </span>
         <p className={styles.description}>
