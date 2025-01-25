@@ -7,3 +7,19 @@
 .DSM-p {
     margin-bottom: 1000px;
 }
+.mute-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1002; /* Ensure the button is above other elements */
+}
+
+.mute-button:hover {
+    background-color: var(--btn-hover-color, #0056b3);
+}
