@@ -26,7 +26,6 @@ export default App;
 //Have mute icon on mini websites
 //Create mini websites for each project
 //Adjust scroll to top button size with media size (or make it disappear on smaller screens)
-//Toggle for theme
 //Button that runs away
 //formspree integration in contact form
 // - About you section
@@ -42,5 +41,4 @@ export default App;
 //Guide the user through the projects
 //Gradient Borders
 //On hover, flip the image to show TP Logo (Also Change the name)
-//Gradient borders?
 //Project cards on hover increase image size, change picture (flip card???) and onclick zoom in to the image and it's now a new page detailing the project
