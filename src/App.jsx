@@ -24,7 +24,6 @@ export default App;
 //Only flash card image
 //Have flash effect around card on click
 //Have mute icon on mini websites
-//Create mini websites for each project
 //Adjust scroll to top button size with media size (or make it disappear on smaller screens)
 //Button that runs away
 //formspree integration in contact form
@@ -42,3 +41,4 @@ export default App;
 //Gradient Borders
 //On hover, flip the image to show TP Logo (Also Change the name)
 //Project cards on hover increase image size, change picture (flip card???) and onclick zoom in to the image and it's now a new page detailing the project
+//Create mini websites for each project

@@ -41,8 +41,8 @@ function Hero() {
             type="checkbox"
             checked={theme === "dark"}
             onChange={() => {
-              toggleTheme();
               playAudio(ThemeChangeAudio);
+              toggleTheme();
             }}
           />
           <span className={styles.slider}>

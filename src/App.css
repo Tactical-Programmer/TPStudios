@@ -21,7 +21,7 @@
   --footer-text-color: #bbb;
   --drop-shadow-color: rgba(255, 255, 255, 0.25);
   --card-flash-color: #fff;
-  --background-image: url("./assets/background-dark.jpg");
+  --background-image: url("./assets/background-dark.png");
 }
 
 body {

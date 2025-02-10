@@ -3,6 +3,7 @@ import ContactSubmitSound from "../../Sounds/Contact-Submit.mp3";
 
 function Contact() {
   const ContactSubmitAudio = new Audio(ContactSubmitSound);
+  ContactSubmitAudio.volume = 0.3;
 
   return (
     <section id="contact" className={styles.container}>
