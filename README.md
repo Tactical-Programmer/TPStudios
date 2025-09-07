@@ -1,1 +1,1 @@
-Tactical Programmer's Portfolio
+Anderson Queiroz' (Tactical Programmer) Portfolio
