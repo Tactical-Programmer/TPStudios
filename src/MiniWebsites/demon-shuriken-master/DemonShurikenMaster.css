@@ -5,8 +5,9 @@
 }
 
 .DSM-p {
-    margin-bottom: 1000px;
+    margin-bottom: 100px;
 }
+
 .mute-button {
     position: absolute;
     top: 10px;
@@ -22,4 +23,10 @@
 
 .mute-button:hover {
     background-color: var(--btn-hover-color, #0056b3);
+}
+
+img.coming-soon {
+    max-width: 700px;
+    width: 700px;
+    height: auto;
 }

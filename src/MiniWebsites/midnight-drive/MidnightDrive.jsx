@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import "./MidnightDrive.css";
 import BackgroundMusic from '../../Music/MidnightDrive.mp3';
+import ComingSoonImage from '../../assets/coming-soon.jpg';
 
 function MiniWebsiteMidnightDrive() {
   const BackgroundMusicAudio = useRef(new Audio(BackgroundMusic));
@@ -33,6 +34,7 @@ function MiniWebsiteMidnightDrive() {
       <button onClick={toggleMute} className="mute-button">
         {isMuted ? "Unmute" : "Mute"}
       </button>
+      <img className="coming-soon" src={ComingSoonImage}/>
       {/* Add more content as needed */}
     </div>
   );

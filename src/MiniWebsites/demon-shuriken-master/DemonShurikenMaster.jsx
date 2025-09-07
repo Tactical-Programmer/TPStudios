@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import "./DemonShurikenMaster.css";
 import BackgroundMusic from '../../Music/DemonShurikenMaster.mp3';
+import ComingSoonImage from '../../assets/coming-soon.jpg';
 
 function MiniWebsiteDemonShurikenMaster() {
   const BackgroundMusicAudio = useRef(new Audio(BackgroundMusic));
@@ -33,6 +34,7 @@ function MiniWebsiteDemonShurikenMaster() {
       <button onClick={toggleMute} className="mute-button">
         {isMuted ? "Unmute" : "Mute"}
       </button>
+      <img className="coming-soon" src={ComingSoonImage}/>
       {/* Add more content as needed */}
     </div>
   );
