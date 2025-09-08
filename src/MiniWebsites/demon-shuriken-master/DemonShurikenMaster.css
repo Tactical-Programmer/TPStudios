@@ -26,7 +26,22 @@
 }
 
 img.coming-soon {
-    max-width: 700px;
-    width: 700px;
+    max-width: 300px;
+    width: 300px;
     height: auto;
+}
+
+@media (width >= 768px) {
+    img.coming-soon {
+        max-width: 500px;
+        width: 500px;
+        height: auto;
+    }
+  @media (width >= 1200px) {
+    img.coming-soon {
+        max-width: 700px;
+        width: 700px;
+        height: auto;
+    }
+  }
 }
