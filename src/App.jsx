@@ -21,6 +21,8 @@ function App() {
 
 export default App;
 
+//update skills
+//gather emails
 //Only flash card image
 //Have flash effect around card on click
 //Have mute icon on mini websites
