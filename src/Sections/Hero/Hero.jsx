@@ -2,6 +2,10 @@ import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/hero-img.png";
 import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";
+import youtubeLight from "../../assets/youtube-light.svg";
+import youtubeDark from "../../assets/youtube-dark.svg";
+import tiktokLight from "../../assets/tiktok-light.svg";
+import tiktokDark from "../../assets/tiktok-dark.svg";
 import twitterLight from "../../assets/twitter-light.svg";
 import twitterDark from "../../assets/twitter-dark.svg";
 import githubLight from "../../assets/github-light.svg";
@@ -60,18 +64,24 @@ function Hero() {
         </h1>
         <h2>Unity Game Developer</h2>
         <span>
+          <a href="https://youtube.com/tactical-programmer" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
+            <img src={theme === "light" ?  youtubeDark : youtubeLight} alt="YouTube Icon" />
+          </a>
+          <a href="https://www.tiktok.com/@tactical_programmer" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
+            <img src={theme === "light" ? tiktokDark : tiktokLight} alt="Tik Tok Icon" />
+          </a>
           <a href="https://x.com/TacProgram" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
-            <img src={theme === "light" ? twitterLight : twitterDark} alt="Twitter Icon" />
+            <img src={theme === "light" ? twitterDark : twitterLight} alt="Twitter Icon" />
           </a>
           <a href="https://github.com/Tactical-Programmer" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
-            <img src={theme === "light" ? githubLight : githubDark} alt="GitHub Icon" />
+            <img src={theme === "light" ? githubDark : githubLight} alt="GitHub Icon" />
           </a>
           <a href="https://linkedin.com/in/tactical-programmer" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
-            <img src={theme === "light" ? linkedinLight : linkedinDark} alt="Linkedin Icon" />
+            <img src={theme === "light" ? linkedinDark : linkedinLight} alt="LinkedIn Icon" />
           </a>
         </span>
         <p className={styles.description}>
-          An indie game developer with a passion for Videogames.
+          Making an Awesome Platform Fighting Game with No Ring Outs, using Rollback Netcode!
         </p>
         <a href={cv} download>
           <button className="hover" onClick={() => playAudio(ResumeDownloadAudio)}>Resume</button>
