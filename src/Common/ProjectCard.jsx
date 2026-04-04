@@ -19,7 +19,7 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
   MiniWebsiteCloseAudio.volume = 0.5;
 
   useEffect(() => {
-    if (flash || isExpanding || isExpanded || showMiniWebsite || isMinimizing) {
+    if (showMiniWebsite) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
@@ -34,10 +34,10 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
     setTimeout(() => {
       setIsExpanding(false);
       setIsExpanded(true);
-      setShowMiniWebsite(true); // Show mini website content after expansion
+      setShowMiniWebsite(true);
       MiniWebsiteOpenAudio.currentTime = 0;
       MiniWebsiteOpenAudio.play();
-    }, 500); // Match the transition duration
+    }, 500);
   };
 
   const handleCollapse = () => {
@@ -47,8 +47,8 @@ function ProjectCard({ src, link, h3, p, miniWebsiteComponent }) {
     setTimeout(() => {
       setIsExpanded(false);
       setIsMinimizing(false);
-      setShowMiniWebsite(false); // Hide mini website content before minimizing
-    }, 500); // Match the transition duration
+      setShowMiniWebsite(false);
+    }, 500);
   };
 
   return (

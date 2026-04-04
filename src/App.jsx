@@ -22,7 +22,6 @@ function App() {
 export default App;
 
 //add project E as a project
-//update skills
 //gather emails
 //Only flash card image
 //Have flash effect around card on click
