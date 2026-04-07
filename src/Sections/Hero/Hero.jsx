@@ -63,6 +63,9 @@ function Hero() {
           Queiroz
         </h1>
         <h2>Unity Game Developer</h2>
+        <p className={styles.description}>
+          Making an Awesome Platform Fighting Game with No Ring Outs, using Rollback Netcode!
+        </p>
         <span>
           <a href="https://youtube.com/tactical-programmer" target="_blank" onClick={() => playAudio(IconSelectAudio)}>
             <img src={theme === "light" ?  youtubeDark : youtubeLight} alt="YouTube Icon" />
@@ -80,9 +83,6 @@ function Hero() {
             <img src={theme === "light" ? linkedinDark : linkedinLight} alt="LinkedIn Icon" />
           </a>
         </span>
-        <p className={styles.description}>
-          Making an Awesome Platform Fighting Game with No Ring Outs, using Rollback Netcode!
-        </p>
         <a href={cv} download>
           <button className="hover" onClick={() => playAudio(ResumeDownloadAudio)}>Resume</button>
         </a>

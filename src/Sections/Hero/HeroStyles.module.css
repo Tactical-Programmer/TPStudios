@@ -12,6 +12,11 @@
     border-radius: 50%;
   }
 
+  h2 {
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+
   span {
     display: flex;
     gap: 25px;
